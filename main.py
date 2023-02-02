@@ -2,7 +2,6 @@
 # Cada zapato tendrá Talla, estilo y color
 
 import random
-
 import zapatilla
 
 print("Aplicación para simular la venta de 100 zapatos\n");
@@ -35,21 +34,26 @@ tallas = [28, 30, 32, 34, 36, 38, 40, 42, 44]
 for talla in tallas:
     print(f"- {talla}")
 
-
 print("=========== LAS VENTAS FUERON =================")
 
+# zapatilla1=zapatilla.Zapatilla()
 
+ventas = []
 
+# print(zapatilla.get_talla(),"gggg")
 
-ventas=zapatilla.Zapatilla()
-
-ZapatosVendidos=[]
+#Darle argumentos a la clase
 for i in range(10):
-    ZapatosVendidos[i] = ventas.set_estilo(estilos[random.randint(0, len(estilos))])
-    ZapatosVendidos[i] = ventas.set_color(colores[random.randint(0, len(colores))])
-    ZapatosVendidos[i]= ventas.set_talla(tallas[random.randint(0, len(tallas))])
+    a = estilos[random.randint(0, len(estilos) - 1)]
+    b = tallas[random.randint(0, len(tallas) - 1)]
+    c = colores[random.randint(0, len(colores) - 1)]
+    zapatilla = zapatilla.Zapatilla(a, b, c)
+    ventas.append(zapatilla)
 
-cont=0
+#
+for i in range(len(ventas) - 1):
+    print(vars(ventas[i]))
+    # for attr, value in kk.__dict__.items():
+    # print(f"{attr}:{value}")
 
-for i in ZapatosVendidos:
-    print(i)
+
