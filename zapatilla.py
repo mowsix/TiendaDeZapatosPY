@@ -1,13 +1,15 @@
+
+
 class Zapatilla:
     def __init__(self, estilo, talla, color):
         self.talla = talla
         self.color = color
         self.estilo = estilo
 
-    #def __init__(self):
-        #self.__talla = 0
-        #self.__color = ""
-        #self.__estilo = ""
+    # def __init__(self):
+    # self.__talla = 0
+    # self.__color = ""
+    # self.__estilo = ""
 
     def get_talla(self):
         return self.__talla
@@ -26,3 +28,5 @@ class Zapatilla:
 
     def set_estilo(self, estilo):
         self.__estilo = estilo
+
+
